@@ -68,7 +68,7 @@ h1 p {
 .menu_bg_img {
     position: absolute;
     top: 0;
-    left: 10;
+    left: 10px;
     z-index: -1;
 }
 
@@ -86,7 +86,6 @@ h1 p {
 }
 
 .main_wrap {
-   
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -155,7 +154,7 @@ h1 p {
 input {
     display: block;
     padding: 25px 30px;
-    background: #FFFFFF;
+    background: #eaeaea;
     border: 2px solid #76C22E;
     box-shadow: -8px 8px 17px rgba(121, 199, 47, 0.5);
     border-radius: 22px;
@@ -176,9 +175,8 @@ input[type=submit] {
 }
 
 .contact_img {
-    
     margin-right: 150px;
-    margin-top: 54px;
+    margin-top: 100px;
 }
 
 .contact_img_bg {
@@ -208,10 +206,11 @@ footer {
     text-decoration: none;
     margin-right: 15px;
     font-size: 28px;
+
 }
 
 .logo_footer{
-    width: 110px;
+    width: 160px;
     margin-right: 150px;
 }
 
