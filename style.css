@@ -32,7 +32,7 @@ header {
 .nav {
     padding: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -47,6 +47,10 @@ header {
 
 .nav_item:not(:last-child) {
     border-right: 1px solid #EAB602;
+}
+
+.fa-bars {
+    display: none;
 }
 
 h1, .menu_p, h2 {   
@@ -235,8 +239,8 @@ footer {
     html {
         overflow-x: hidden;
     }
-    header {
-        position: relative;
+    .main, .contact_us {
+        padding-top: 20px;
     }
     .nav_item {
         display: none;
@@ -244,21 +248,26 @@ footer {
     .nav {
         padding: 20px;
     }
+    .fa-bars {
+        display: inline;
+        font-size: 25px;
+    }
     h1, .menu_p, h2 {
-        padding: 20px 20px ;
+        padding: 10px 20px ;
         text-transform: uppercase;
-        font-size: 38px;  
+        font-size: 40px;  
         line-height: 1;
+        letter-spacing: normal;
         text-align: center;
     }
     .menu, .menu_p, h1, .img_menu {
         position: relative;
     }
     .img_menu {
-        right: -20px;
-        width: 90%;
+        right: -1px;
+        width: 100%;
     }
-    .menu_bg_img, .main_bg_img, .footer_img_bg {
+    .menu_bg_img, .main_bg_img {
         width: 100%;
         position: absolute;
         z-index: 0;
@@ -282,11 +291,12 @@ footer {
     }
     .contact_us {
         padding-left: 20px;
-        flex-wrap: wrap;
-        background-size: 100%;
+        flex-wrap: wrap; 
         background-position: 0 100%;
     }
-    
+    .contact_us, .footer_wrap {
+        background-size: 100%;
+    }
     .sub_title {
         font-size: 16px;
         line-height: 1;
