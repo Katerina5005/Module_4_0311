@@ -6,6 +6,9 @@
     font-family: 'HeadingPro';
     src: url('/fonts/HeadingPro-Regular.ttf') format('truetype');
 }
+html {
+    overflow-x: hidden;
+}
 
 body, input, a {
     margin: 0;
@@ -69,7 +72,7 @@ h2 {
 .menu_bg_img {
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 0;
     z-index: -1;
 }
 
@@ -125,18 +128,25 @@ h2 {
     z-index: 1;
 }
 
-.img_bg {
+.main_bg_img {
     position: absolute;
     top: 6%;
     right: 11%;
-    
+    z-index: 0;
 }
 
 .contact_us {
     padding-left: 90px;
     background: #80C242;
     display: flex;
-    position: relative;  
+    position: relative; 
+    background-image: url('img/contact_img_bg.png');
+    
+}
+.contact_us, .footer_wrap {
+    background-size: 53%;
+    background-repeat: no-repeat;
+    background-position: 8% 100%;
 }
 
 .sub_title {
@@ -148,8 +158,7 @@ h2 {
 .contact_form {
     display: block;
     position: absolute;
-    z-index: 1;
-    
+    z-index: 1;  
 }
 
 input {
@@ -164,7 +173,7 @@ input {
     width: 465px;
     text-align: center;
     font-size: 20px;
-   
+   color: #443E3E;
 }
 
 input[type=submit] {
@@ -180,13 +189,6 @@ input[type=submit] {
     margin-top: 100px;
 }
 
-.contact_img_bg {
-    position: absolute;
-    bottom: 0;
-    left: 90px;
-    z-index: 0;
-}
-
 footer {
     background: #80C242;
 }
@@ -194,7 +196,9 @@ footer {
 .footer_wrap {
     display: flex;
     justify-content: center;
-    padding: 50px 0; 
+    padding: 50px 0;
+    background-image: url('img/footer_img_bg.png'); 
+    background-position: 8% 0;
 }
 
 .w-50 {
@@ -222,14 +226,15 @@ footer {
 
 .footer_img_bg {
     position: absolute;
-    left: 90px;
+    left: 52px;
     top: 0;
     z-index: 0;
 }
 
-@media (max-width: 736px) {
-
-
+@media all and (max-width: 500px) {
+    html {
+        overflow-x: hidden;
+    }
     header {
         position: relative;
     }
@@ -240,18 +245,25 @@ footer {
         padding: 20px;
     }
     h1, .menu_p, h2 {
-        padding: 15px 20px ;
+        padding: 20px 20px ;
         text-transform: uppercase;
         font-size: 38px;  
         line-height: 1;
         text-align: center;
     }
-    
-    .img_menu {
+    .menu, .menu_p, h1, .img_menu {
         position: relative;
+    }
+    .img_menu {
         right: -20px;
         width: 90%;
     }
+    .menu_bg_img, .main_bg_img, .footer_img_bg {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+    
     .main_card {
         padding: 20px 25px 20px 25px;
         margin: 10px 20px; 
@@ -264,10 +276,15 @@ footer {
         transform: translateX(55%);     
         width: 80%;    
     }
+    .main_bg_img {
+        left: 0;
+        bottom: 0;
+    }
     .contact_us {
         padding-left: 20px;
         flex-wrap: wrap;
-        position: relative;  
+        background-size: 100%;
+        background-position: 0 100%;
     }
     
     .sub_title {
@@ -296,50 +313,31 @@ footer {
     }
     
     .contact_img {
-        position: absolute;
-        top: 220px;
         width: 100%;
-        transform: translateX(-6%);
-        z-index: 2;
+        transform: translateX(-5%);
+        padding: 0;
+        margin: 0;
     }
-    
-    .contact_img_bg {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 0;
-    }
-
     footer {
-        position: absolute;
-        padding-top: 420px;
+        position: relative;
     }
     .footer_wrap { 
         display: block;
         text-align: center;
         padding: 20px; 
     }
-    
     .w-50 {
         width:100%;  
         font-size: 14px;  
     }
-    
     .sm_links a {
         margin: 0;
         padding: 0 10px;
     }
-    
     .logo_footer{
         width: 100px;
         margin-right: 0;
     }
-    .footer_img_bg {
-        position: absolute;
-        left: 90px;
-        top: 0;
-        z-index: 0;
-    }
-
+   
 
 }
